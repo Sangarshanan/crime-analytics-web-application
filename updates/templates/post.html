@@ -1,0 +1,77 @@
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+    {% load staticfiles %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--
+
+Template 2091 Ziggy
+
+http://www.tooplate.com/view/2091-ziggy
+
+-->
+        <title>Updates</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/bootstrap-theme.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/fontAwesome.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/tooplate-style.css' %}" type = 'text/css'/>
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+      <h1 align="center"> Case Update {{post.id }} </h1>
+      <hr>
+      <br>
+
+
+
+          <div class="container">
+              <div class="jumbotron">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="text-content">
+                  <h3>{{post.title}} on {{post.date}} </h3>
+                  <div class="line-dec"></div>
+                  <h1>{{post.body|safe|linebreaks}}</h1>
+
+
+<p>Check out the Case
+
+<button onclick="myFunction() ">Progress</button> </p>
+                  <progress id="myProgress" value="0" max="100">
+</progress>
+
+
+<script>
+function myFunction() {
+    document.getElementById("myProgress").value = {{post.id}}*10;
+
+}
+</script>
+<br>
+<br>
+
+                                    <a href="/updates">
+   				  <button type="button" class="btn btn-info">Go Back</button></a> 
+                </div>
+              </div>
+            </div>
+          </div>
+     
+        </div>
+      </body>
+      </html>
+
+
+
+

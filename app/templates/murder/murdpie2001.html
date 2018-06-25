@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Plotting</title>
+   {% load static %} 
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/bootstrap-theme.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/fontAwesome.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/tooplate-style.css' %}" type = 'text/css'/>
+
+
+   <script type="text/javascript" src="{% static "fusioncharts.js" %}"></script>
+   <script type="text/javascript" src="{% static "themes/fusioncharts.theme.ocean.js" %}"></script>
+  </head>
+  <div class="container">
+
+<h1 align="center"> Victims of murder with respect to their age in the year {{var1}} </h1>
+<hr>
+</div>
+
+  <body>
+    <div id="section1">
+<div class="container">
+
+    <!-- Fusion Charts will render here-->
+    <div id="chart-container">  
+    <div id  ="chart-1" >    
+    {{ output|safe }}
+</div>
+    </div>
+    </div>
+</div>
+  </body>
+
+  </html>

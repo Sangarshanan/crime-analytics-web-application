@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Content</title>
+  {% load staticfiles %}
+
+</head>
+        <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/bootstrap-theme.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/fontAwesome.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/tooplate-style.css' %}" type = 'text/css'/>
+
+
+ <div class="container">
+
+    <h1 align="center" style="font-family:verdana;">Add a row to the Murders table</h1>
+    <hr>
+            {% load widget_tweaks %}
+
+<form method="post">
+  {% csrf_token %}
+
+  {% for hidden_field in form.hidden_fields %}
+    {{ hidden_field }}
+  {% endfor %}
+
+  {% for field in form.visible_fields %}
+    <div class="form-group">
+      {{ field.label_tag }}
+      {% render_field field class="form-control" %}
+      {% if field.help_text %}
+        <small class="form-text text-muted">{{ field.help_text }}</small>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  <button style="height:40px; width:500px;" type="submit" class="btn btn-primary" align:"center">Submit</button>
+</form>
+
+  </div>
+</section>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,382 @@
+`<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Crime Analysis</title>{% csrf_token %}
+        {% load staticfiles %}
+
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/bootstrap-theme.min.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/fontAwesome.css' %}" type = 'text/css'/>
+        <link rel="stylesheet" href=" {% static 'css/tooplate-style.css' %}" type = 'text/css'/>
+
+       
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+  body {
+      position: relative; 
+  }
+  .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+</style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="0">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+         <a class="navbar-brand" href="#">Welcome {{name}}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="#analysis"><span class="glyphicon glyphicon-stats"></span> Analysis</a></li>
+        <li><a href="#updates"><span class="glyphicon glyphicon-folder-open "></span> &nbsp; Case files</a></li>
+        <li><a href="#shooting"><span class="glyphicon glyphicon-globe "></span> &nbsp; International</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Add User</a></li>
+        <li><a href="/admin"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<br>
+
+
+
+
+<div id="home">
+<section class="first-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="text-content">
+                <h2>Indian Crime Analytics Department</h2>
+                  <div class="line-dec"></div>
+                  <span>Keeping our Country Safe &amp; Secure through data</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+ 
+        <section class="second-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <div class="icon">
+                    <img src= "{% static 'img/icons8-intelligence-100.png' %}" alt="">
+                  </div>
+                  <h4>Machine Learning</h4>
+                  <p>Officers can make use of Machine learning algorithm to make accurate predictions that can very much help them solve cases</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <div class="icon">
+                    <img src="{% static 'img/SEO-icon.png' %}" alt="">
+                  </div>
+                  <h4>Visualizations</h4>
+                  <p>Officers can view interactive plots and visualizations to help them understand the crimes and take actions accordingly</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <div class="icon">
+                    <img src="{% static 'img/o.png' %}" alt="">
+                  </div>
+                  <h4>Case Updates</h4>
+                  <p>Officers can view all the latest case Updates and add any available current cases to keep updating the registry</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <div class="icon">
+                    <img src="{% static 'img/icons8-handcuffs-96.png' %}" alt="">
+                  </div>
+                  <h4>Solve Cases</h4>
+                  <p>Acquire the knowledge of the case through updates and combine it with analytics to quickly solve cases and reduce crime rate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+<div id="analysis">
+<div class="container">
+  <div class="jumbotron">
+  
+    <h2>Crimes Against Women <a href="/formcrimesagaintswomen" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus"></span> Add 
+        </a> </h2>
+   <p><a href="/overyears"> Click here for Analysis over the years</a></p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">With respect to every State</button>
+  <div id="demo" class="collapse">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<a href="/chart2001"> 2001 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2002"> 2002 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2003"> 2003 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2004"> 2004 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2005"> 2005 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2006"> 2006 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2007"> 2007 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2008"> 2008 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2009"> 2009 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/chart2010"> 2010 </a><br>
+
+  
+
+    </div><br><br>
+ 
+
+
+
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">With respect to victims Age</button> 
+  <div id="demo1" class="collapse">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<a href="/pie2001"> 2001 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2002"> 2002 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2003"> 2003 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2004"> 2004 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2005"> 2005 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2006"> 2006 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2007"> 2007 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2008"> 2008 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2009"> 2009 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/pie2010"> 2010 </a><br>
+
+    </div><br><br>
+
+
+  
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container">
+  <div class="jumbotron">
+  
+    <h2>Victims of Murder <a href="/formmurder" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus"></span> Add 
+        </a> </h2> 
+    <p><a href="/murders"> Click here for Analysis over the years</a></p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#dem">With respect to each state</button>
+  <div id="dem" class="collapse">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<a href="/murd2001"> 2001 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2002"> 2002 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2003"> 2003 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2004"> 2004 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2005"> 2005 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2006"> 2006 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2007"> 2007 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2008"> 2008 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2009"> 2009 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murd2010"> 2010 </a><br>
+  </div>
+  <br>
+  <br>
+
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#pie">With respect to victims Age</button>
+  <div id="pie" class="collapse">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<a href="/murdpie2001"> 2001 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2002"> 2002 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2003"> 2003 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2004"> 2004 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2005"> 2005 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2006"> 2006 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2007"> 2007 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2008"> 2008 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2009"> 2009 </a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <a href="/murdpie2010"> 2010 </a><br>
+
+    </div>
+</div>
+</div>
+
+<br>
+
+
+
+
+
+
+
+
+
+      <div id="updates">
+        <section class="fourth-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="portfolio-item second-item">
+                  <div class="image">
+                    <a href={% static '01.html' %} data-lightbox="image-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlMXdVbADAb_owiESsuNG3WP4Qmq51rHCrkWhymPsrPDQRThmr" style="width:300px;height:200px;"></a>
+                  </div>
+                  <div class="text">
+                    <h4>Tamil Nadu tourist found dead in Kullu</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="portfolio-item second-item">
+                  <div class="image">
+                    <a href={% static '02.html' %} data-lightbox="image-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR28GlXEQ494wZD6qqQykMQ3hvugK-vyzcWwWn2ogZxA49FGrDA" style="width:300px;height:200px;"></a>
+                  </div>
+                  <div class="text">
+                    <h4>US envoy meets Tamil Nadu governor
+</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="portfolio-item third-item">
+                  <div class="image">
+                    <a href={% static '03.html' %} data-lightbox="image-1"><img src="https://resize.indiatvnews.com/en/centered/oldbucket/715_431/mainnational/IndiaTv63e0c3_UP-police-final.jpg" style="width:300px;height:200px;"></a>
+                  </div>
+                  <div class="text">
+                    <h4>Constable gathering intel murdered in TN</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="send-to-portfolio">
+                  <span>Check out the latest developments</span>
+                  <div class="primary-button">
+                    <a href="/updates">Case Updates</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+  <div id="shooting">
+  <div class="container">
+  <div class="jumbotron">
+  
+    <h2>School Shootings in the United States Of America  </h2>
+    <p><a href="/shooting"> Time series plot of the casualities over the years</a></p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#citi">With respect to cities</button>
+
+  <div id="citi" class="collapse">
+    <br>
+        <p><a href="/death"> Number of Deaths</a></p>
+        <p><a href="/inj"> Number of Injuries</a></p>
+        <p><a href="/diainj"> Number of Deaths vs Injuries</a></p>
+        <p><a href="/deaandinj"> Number of Deaths + Injuries</a></p>
+  </div>
+  <br><br>
+
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#shoot">With respect to State</button>
+
+  <div id="shoot" class="collapse">
+    <br>
+        <p><a href="/shot_kil"> Number of Deaths</a></p>
+        <p><a href="/shot_inj"> Number of Injuries</a></p>
+        <p><a href="/injkill"> Number of Deaths vs Injuries</a></p>
+        <p><a href="/fatal"> Number of Deaths + Injuries</a></p>
+
+
+
+
+
+  </div>
+</div>
+</div>
+  <div class="container">
+  <div class="jumbotron">
+  <h2>San Francisco City Crime Prediction  </h2>
+
+  <p><a href="/sanfrancisco"> Select the paramaters for the prediction</a></p>
+
+<p>The dataset provides nearly 12 years of crime reports from across all of San Francisco's neighborhoods and given time and location, we have used predict the category of crime that occurred.
+</p>
+
+      <p><a href="https://www.kaggle.com/c/sf-crime/data"> Link to the used Kaggle Dataset </a></p>
+
+
+
+  
+
+
+</div>
+</div>
+</div>
+<footer>
+
+                  <a href="https://www.facebook.com/sangarshanan.veera"><i class="fa fa-facebook"></i></a>
+                  <a href="https://twitter.com/sangarshanan"><i class="fa fa-twitter"></i></a>
+                  <a href="https://linkedin.com/in/sangarshanan"><i class="fa fa-linkedin-square"></i></a>
+                  <a href="https://github.com/Sangarshanan"><i class="fa fa-github"></i></a>
+
+                <br>
+                <h4> <a href="https://github.com/Sangarshanan/Crime-Analytics-Web-Application" target="_parent">Source Code</a></h4>
+           
+</footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

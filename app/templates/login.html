@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Login Form</title>
+  {% load staticfiles %}
+
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <span href="#" class="button" id="toggle-login">Police Login</span>
+
+<div id="login">
+  <div id="triangle"></div>
+  <h1>Login</h1>
+  <form method="post" action="/index"> {% csrf_token %}
+    <input type="text" name = "name" placeholder="Id number" />
+    <input type="password" name = "passwd" placeholder="Password" />
+    <input type="submit" value="Log in" /><br>
+    <br> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="/updates"> Click here for add cases/ view progress </a>
+  </form>
+</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="{% static 'login/js/index.js' %}"></script>
+
+</body>
+
+</html>
