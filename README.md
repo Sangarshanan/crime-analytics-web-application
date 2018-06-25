@@ -31,7 +31,6 @@ To host the application on your localhost
 
 ```
 python manage.py runserver
-
 ```
 
 
