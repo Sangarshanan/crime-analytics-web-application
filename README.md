@@ -5,7 +5,9 @@ Visualization done using:
 
 - Plotly
 
--FusionCharts
+- FusionCharts
+
+Machine learning done using a pretrained model
 
 
 ## Running in your local system:
