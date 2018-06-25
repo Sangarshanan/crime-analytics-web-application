@@ -1,6 +1,42 @@
 # Django-Crime-Analytics-Web-App
 A Django Based Crime Visualization and ML Application 
 
+## Running in your local system:
+
+Clone the repository and navigate to the folder
+
+Open your shell and install pip (If you don't have it)
+
+Now, install all the requirements using the below command
+
+```
+pip install -r requirements.txt
+```
+
+Now create your own Admin/Superuser
+
+```
+python manage.py createsuperuser
+
+```
+
+You can now login using your credentials, but before logging in we need be migrate our database content
+
+```
+python manage.py makemigrations
+
+python manage.py migrate
+```
+
+```
+python manage.py runserver
+
+
+
+
+
+
+
 ## Running on Heroku:
 
 https://crimeanalyticsdjango.herokuapp.com/
@@ -10,13 +46,4 @@ https://crimeanalyticsdjango.herokuapp.com/
 Username : Admin
 
 Password: 12345six
-
-## Running in your local system:
-
-Clone the repository and install all the requirements 
-
-```
-pip install -r requirements.txt
-```
-
 
