@@ -27,12 +27,13 @@ python manage.py makemigrations
 
 python manage.py migrate
 ```
+To host the application on your localhost
 
 ```
 python manage.py runserver
 
 
-
+```
 
 
 
