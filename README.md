@@ -32,7 +32,6 @@ To host the application on your localhost
 ```
 python manage.py runserver
 
-
 ```
 
 
@@ -48,3 +47,9 @@ Username : Admin
 
 Password: 12345six
 
+
+
+### Visualization done using:
+
+- Plotly
+-FusionCharts
