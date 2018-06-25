@@ -1,6 +1,13 @@
 # Django-Crime-Analytics-Web-App
 A Django Based Crime Visualization and ML Application 
 
+Visualization done using:
+
+- Plotly
+
+-FusionCharts
+
+
 ## Running in your local system:
 
 Clone the repository and navigate to the folder
@@ -48,7 +55,3 @@ Password: 12345six
 
 
 
-### Visualization done using:
-
-- Plotly
--FusionCharts
