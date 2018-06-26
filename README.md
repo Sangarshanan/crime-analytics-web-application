@@ -26,7 +26,6 @@ Now create your own Admin/Superuser
 
 ```
 python manage.py createsuperuser
-
 ```
 
 You can now login using your credentials, but before logging in we need be migrate our database content
