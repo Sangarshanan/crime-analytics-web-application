@@ -7,7 +7,7 @@ Visualization done using:
 
 - FusionCharts
 
-Machine learning done using a pretrained model
+Machine learning done using a pretrained bayesian model
 
 
 ## Running in your local system:
