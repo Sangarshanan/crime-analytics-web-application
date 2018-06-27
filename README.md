@@ -41,7 +41,11 @@ To host the application on your localhost
 python manage.py runserver
 ```
 
+To Update the database contents 
 
+Run  ``` python import.py ```
+
+Now edit the import file to suit the other model and again run it to insert all csv contents to the Sqlite database
 
 
 ## Running on Heroku:
