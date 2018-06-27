@@ -9,7 +9,7 @@ import django
 django.setup()
 from app.models import murder
 
-data = csv.reader(open("C:/Users/Sangarshanan Veera/Desktop/Hack/DJANGO/crime analytics/32_Murder_victim_ag_sex.csv"),delimiter=',')
+data = csv.reader(open("32_Murder_victim_age_sex.csv"),delimiter=',')
 for row in data:
 	if row[0] != 'Area_Name':
 
