@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'app',
     'updates',
     'widget_tweaks',
-    'import_export'
 
 ]
 
