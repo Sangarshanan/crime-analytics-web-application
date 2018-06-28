@@ -921,16 +921,14 @@ def chart2010(request):
 
 
 def pie2001(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2001
         df = data[(data['Year'] == 2001)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -958,16 +956,14 @@ def pie2001(request):
 
 
 def pie2002(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2002
         df = data[(data['Year'] == 2002)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -993,16 +989,14 @@ def pie2002(request):
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 
 def pie2003(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2003
         df = data[(data['Year'] == 2003)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1028,16 +1022,14 @@ def pie2003(request):
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 
 def pie2004(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2004
         df = data[(data['Year'] == 2004)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1063,16 +1055,14 @@ def pie2004(request):
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 
 def pie2005(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2005
         df = data[(data['Year'] == 2005)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1098,16 +1088,14 @@ def pie2005(request):
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 
 def pie2006(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2006
         df = data[(data['Year'] == 2006)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1132,16 +1120,14 @@ def pie2006(request):
 
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 def pie2007(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2007
         df = data[(data['Year'] == 2007)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1166,16 +1152,14 @@ def pie2007(request):
 
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 def pie2008(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2008
         df = data[(data['Year'] == 2008)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1200,16 +1184,14 @@ def pie2008(request):
 
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 def pie2009(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2009
         df = data[(data['Year'] == 2009)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1234,16 +1216,14 @@ def pie2009(request):
 
         return  render(request, 'women/pie2001.html', {'output' : pie3d.render(), 'var1':var1})
 def pie2010(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '20_Victims_of_rape.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('20_Victims_of_rape.csv')
         var1 = 2010
         df = data[(data['Year'] == 2010)]
         top = [sum(df['Victims_Above_50_Yrs']),
-         sum(df['Victims_Between_10-14_Yrs']),
-         sum(df['Victims_Between_14-18_Yrs']),
-         sum(df['Victims_Between_18-30_Yrs']),
-         sum(df['Victims_Between_30-50_Yrs']),
+         sum(df['Victims_Between_10to14_Yrs']),
+         sum(df['Victims_Between_14to18_Yrs']),
+         sum(df['Victims_Between_18to30_Yrs']),
+         sum(df['Victims_Between_30to50_Yrs']),
          sum(df['Victims_Upto_10_Yrs'])
               ]
         value = ['Victims_Above_50_Yrs','Victims_Between_10-14_Yrs','Victims_Between_14-18_Yrs','Victims_Between_18-30_Yrs','Victims_Between_30-50_Yrs','Victims_Upto_10_Yrs']
@@ -1270,9 +1250,7 @@ def pie2010(request):
 
 
 def murdpie2001(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2001
         data = data.fillna(0)
         df = data[(data['Year'] == 2001)]
@@ -1305,9 +1283,7 @@ def murdpie2001(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2002(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2002
         data = data.fillna(0)
         df = data[(data['Year'] == 2002)]
@@ -1340,9 +1316,7 @@ def murdpie2002(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2003(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2003
         data = data.fillna(0)
         df = data[(data['Year'] == 2003)]
@@ -1375,9 +1349,7 @@ def murdpie2003(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2004(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2004
         data = data.fillna(0)
         df = data[(data['Year'] == 2004)]
@@ -1410,9 +1382,7 @@ def murdpie2004(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2005(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2005
         data = data.fillna(0)
         df = data[(data['Year'] == 2005)]
@@ -1445,9 +1415,7 @@ def murdpie2005(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2006(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2006
         data = data.fillna(0)
         df = data[(data['Year'] == 2006)]
@@ -1480,9 +1448,7 @@ def murdpie2006(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2007(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2007
         data = data.fillna(0)
         df = data[(data['Year'] == 2007)]
@@ -1515,9 +1481,7 @@ def murdpie2007(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2008(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2008
         data = data.fillna(0)
         df = data[(data['Year'] == 2008)]
@@ -1550,9 +1514,7 @@ def murdpie2008(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2009(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2009
         data = data.fillna(0)
         df = data[(data['Year'] == 2009)]
@@ -1585,9 +1547,7 @@ def murdpie2009(request):
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
 
 def murdpie2010(request):
-        module_dir = os.path.dirname(__file__)
-        file_path = os.path.join(module_dir, '32_Murder_victim_age_sex.csv')
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('32_Murder_victim_age_sex.csv')
         var1 = 2010
         data = data.fillna(0)
         df = data[(data['Year'] == 2001)]
@@ -1618,6 +1578,7 @@ def murdpie2010(request):
         pie3d = FusionCharts("pie3d", "ex2" , "100%", "500", "chart-1", "json",dataSource) 
 
         return  render(request, 'murder/murdpie.html', {'output' : pie3d.render(), 'var1':var1})
+
 
 def murd2002(request):
     dataSource = {}
