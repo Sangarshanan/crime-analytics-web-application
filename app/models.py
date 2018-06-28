@@ -7,14 +7,14 @@ class crimes_against_women(models.Model):
 	Area_Name = models.CharField(max_length=140)
 	Year = models.CharField(max_length=140)
 	Subgroup = models.CharField(max_length=140)
-	Rape_Cases_Reported = models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
-	Victims_Above_50_Yrs = models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
-	Victims_Between_10to14_Yrs=models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
-	Victims_Between_14to18_Yrs = models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
-	Victims_Between_18to30_Yrs = models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
-	Victims_Between_30to50_Yrs = models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
-	Victims_of_Rape_Total = models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
-	Victims_Upto_10_Yrs = models.IntegerField(null=True,validators=[MaxValueValidator(100), MinValueValidator(1)])
+	Rape_Cases_Reported = models.CharField(max_length=10,null=True)
+	Victims_Above_50_Yrs = models.CharField(max_length=10,null=True)
+	Victims_Between_10to14_Yrs= models.CharField(max_length=10,null=True)
+	Victims_Between_14to18_Yrs =models.CharField(max_length=10,null=True)
+	Victims_Between_18to30_Yrs = models.CharField(max_length=10,null=True)
+	Victims_Between_30to50_Yrs = models.CharField(max_length=10,null=True)
+	Victims_of_Rape_Total =models.CharField(max_length=10,null=True)
+	Victims_Upto_10_Yrs = models.CharField(max_length=10,null=True)
 
 	def __str__(self):
 		return self.Area_Name
