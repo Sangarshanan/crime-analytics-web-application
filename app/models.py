@@ -23,13 +23,13 @@ class murder(models.Model):
 	Area_Name = models.CharField(max_length=140)
 	Year = models.CharField(max_length=140)
 	Group_Name = models.CharField(max_length=140)
-	Victims_Above_50_Yrs = models.CharField(max_length=100,null=True)
-	Victims_Total = models.CharField(max_length=100,null=True)
-	Victims_Upto_10_15_Yrs=models.CharField(max_length=100,null=True)
-	Victims_Upto_10_Yrs = models.CharField(max_length=100,null=True)
-	Victims_Upto_15_18_Yrs = models.CharField(max_length=100,null=True)
-	Victims_Upto_18_30_Yrs = models.CharField(max_length=100,null=True)
-	Victims_Upto_30_50_Yrs = models.CharField(max_length=100,null=True)
+	Victims_Above_50_Yrs = models.CharField(max_length=10,null=True)
+	Victims_Total = models.CharField(max_length=10,null=True)
+	Victims_Upto_10_15_Yrs=models.CharField(max_length=10,null=True)
+	Victims_Upto_10_Yrs = models.CharField(max_length=10,null=True)
+	Victims_Upto_15_18_Yrs = models.CharField(max_length=10,null=True)
+	Victims_Upto_18_30_Yrs = models.CharField(max_length=10,null=True)
+	Victims_Upto_30_50_Yrs = models.CharField(max_length=10,null=True)
 
 	def __str__(self):
 		return self.Area_Name
