@@ -43,9 +43,12 @@ python manage.py runserver
 
 To Update the database contents 
 
-Run  ``` python import.py ```
+Run 
+``` python import.py 
+    python import1.py
+```  
 
-Now edit the import file to suit the other model and again run it to insert all csv contents to the Sqlite database
+Running these two python codes would insert all csv contents to the Sqlite database
 
 
 ## Running on Heroku:
