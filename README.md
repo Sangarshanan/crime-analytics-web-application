@@ -41,11 +41,10 @@ To host the application on your localhost
 python manage.py runserver
 ```
 
-To Update the database contents 
-
-Run 
-``` python import.py 
-    python import1.py
+To Update the database contents run
+``` 
+python import.py 
+python import1.py
 ```  
 
 Running these two python codes would insert all csv contents to the Sqlite database
