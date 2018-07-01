@@ -1,7 +1,7 @@
 # Django-Crime-Analytics-Web-App
 A Django Based Crime Visualization and ML Application 
 
-Visualization done using:
+Visualization done with the help:
 
 - Plotly
 
