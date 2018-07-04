@@ -41,7 +41,7 @@ To host the application on your localhost
 python manage.py runserver
 ```
 
-To Update the database contents run
+To Update the database contents run the python files
 ``` 
 python import.py 
 python import1.py
