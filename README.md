@@ -58,7 +58,7 @@ https://crimeanalyticsdjango.herokuapp.com/
 
 Username : Admin
 
-Password: 12345six
+Password : 12345six
 
 
 
